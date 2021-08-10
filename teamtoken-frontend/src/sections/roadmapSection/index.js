@@ -7,6 +7,7 @@ import RoadmapItemTitle from '../../components/roadmapItemTitle';
 const SectionWrapper = styled.div`
     width: 100%;
     margin-top: 120px;
+    padding-bottom: 300px;
 `;
 
 const RoadmapItemWrapper = styled.div`
@@ -27,12 +28,46 @@ const RoadmapTitleWrapper = styled.div`
     flex-direction: row;
 `;
 
+const DescriptionTitle = styled.div`
+    width: 85%;
+    margin: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #6F6D6D;
+    margin-top: 100px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 50px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+`;
+
+const Description = styled.div`
+    width: 85%;
+    margin: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: justify;
+    color: #CFCFCF;
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+`;
+
 const RoadmapSection = () => {
 
     const roadmap = [
-        {"title": "team building", "status": "done"},
         {"title": "specifications", "status": "done"},
-        {"title": "developement", "status": "active"},
+        {"title": "team building", "status": "active"},
+        {"title": "developement", "status": "none"},
         {"title": "alpha release", "status": "none"},
         {"title": "pre-launch", "status": "none"},
         {"title": "private sale", "status": "none"},
@@ -46,11 +81,15 @@ const RoadmapSection = () => {
         <SectionWrapper>
             <NeonTitle>JUNGLEEX ROADMAP</NeonTitle>
             <RoadmapTitleWrapper>
-                {roadmap.map(step => <RoadmapItemTitle step={step} />)}
+                {roadmap.map(step => <RoadmapItemTitle step={step} key={Math.random()} />)}
             </RoadmapTitleWrapper>
             <RoadmapItemWrapper>
-                {roadmap.map(step => <RoadmapItem step={step} stepIndex={roadmap.indexOf(step)} />)}
+                {roadmap.map(step => <RoadmapItem step={step} stepIndex={roadmap.indexOf(step)} key={Math.random()} />)}
             </RoadmapItemWrapper>
+            <DescriptionTitle>TEAM BUILDING:</DescriptionTitle>
+            <Description>
+                In this step of the project we are looking to find like minded people who want to join our team. 
+            </Description>
         </SectionWrapper>
     )
 }

@@ -1,0 +1,20 @@
+{
+    "1":{
+        "name": "FCote (Nakamoth)",
+        "img": "https://ipfs.io/ipfs/QmQGdSZVdgNTi6UFkbJQor8uL4vfmokjhAiN1Uj87bN2D1",
+        "from": "Canada",
+        "role": "Founder of the project",
+        "socialProfile": "https://github.com/FredCoteMtl",
+        "socialProfileTag": "github",
+        "address": "0x0DE4322e534b6e9883A410BD94B97aeb3Aa346ee"
+    },
+    "2":{
+        "name": "Carlos",
+        "img": "https://ipfs.io/ipfs/QmeYfDWC6X1LAHJVYuc8f5srV7ZJKC6hUMmbtrJqMHuZKH",
+        "from": "Canada",
+        "role": "Marketing",
+        "socialProfile": "https://github.com/open-jungle",
+        "socialProfileTag": "github",
+        "address": "0x6a3480fc7BC1a89B66E3D434CF9E687E91D52C03"
+    }
+}

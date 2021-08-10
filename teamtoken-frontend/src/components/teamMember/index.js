@@ -63,15 +63,25 @@ const HoldBarProgress = styled.div`
         0 0 42px #8AC53C, 
         0 0 82px #8AC53C;
     border-radius: 37px;
-    background-image: linear-gradient(45deg, #3b5ec4 25%, #8ac53c 25%, #8ac53c 50%, #3b5ec4 50%, #3b5ec4 75%, #8ac53c 75%, #8ac53c 100%);
     background-size: 56.57px 56.57px;
     height: 100%;
     width: ${({balance}) => (balance+"%")};
     min-width: 74px;
-
+    background-image: linear-gradient(45deg, #3b5ec4 25%, #8ac53c 25%, #8ac53c 50%, #3b5ec4 50%, #3b5ec4 75%, #8ac53c 75%, #8ac53c 100%);
+    
+    animation: slide 10s linear infinite;
+    
     @media screen and (max-width: 768px) {
         border-radius: 18px;
         min-width: 36px;
+    }
+    
+    @keyframes slide {
+        50% {
+            box-shadow: 
+                0 0 7px #fff, 
+                0 0 42px #8AC53C;
+        }
     }
 `;
 
@@ -104,6 +114,7 @@ const InfoBox = styled.div`
     font-style: normal;
     width: 25%;
     padding: 0 5px;
+    padding-right: 15px;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -141,6 +152,7 @@ const InfoRowData = styled.div`
 `;
 
 const TeamMember = ({ memberData }) => {
+    console.log(memberData.name);
     return (
         <TeamMemberWrapper>
             <MemberPicWrapper>
@@ -151,7 +163,7 @@ const TeamMember = ({ memberData }) => {
                 <HoldBarProgress balance={memberData.balance}/>
             </HoldBar>
             <PercentIndicator>
-                {memberData.balance.toString().substring(0,4)+"%"}
+                {memberData["balance"]+"%"}
             </PercentIndicator>
                 
             <InfoBox>
@@ -174,7 +186,7 @@ const TeamMember = ({ memberData }) => {
                             href={memberData.socialProfile}
                             target={"_blank"}
                             rel={'noreferrer'}
-                            style={{"text-decoration":"none", "color": "#D3D3D3"}}
+                            style={{"textDecoration":"none", "color": "#D3D3D3"}}
                         >
                             {memberData.socialProfileTag}
                         </a>

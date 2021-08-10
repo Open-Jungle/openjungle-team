@@ -13,21 +13,19 @@ Represents the ownership of the project until the governance token is launched. 
 How to set profile
 ---
 1. **First you need your dev ID.**  
-⋅⋅⋅For this the owner must call `newDev(<your address>)` method. Only the owner can create new accounts. To become a dev, join the [discord](https://discord.gg/yN2yEDsYnc) or send me a direct message. (telegram: @LiquidBlocks, discord: FCote#7672)
+For this the owner must call `newDev(<your address>)` method. Only the owner can create new accounts. To become a dev, join the [discord](https://discord.gg/yN2yEDsYnc) or send me a direct message. (telegram: @LiquidBlocks, discord: FCote#7672)
 2. **Second you need to have your profile image and text description on IPFS**  
-⋅⋅⋅(1) simply get the ipfs desktop app. 
-⋅⋅⋅(2) Then create a simple .json file according to the following structure (everything is optional):
+create a .json file with the folowing information and structure:
 ````
 {
-    "name": "<Your display name>",
-    "country": "<Where you are from>",
-    "description": "<Your description>"
+    "name": "FCote (Nakamoth)",
+    "from": "Canada",
+    "role": "Founder of the project",
+    "socialProfile": "https://github.com/FredCoteMtl",
+    "socialProfileTag": "github",
+    "address": "0x0DE4322e534b6e9883A410BD94B97aeb3Aa346ee"
 }
 ````
-⋅⋅⋅(3) You will also need a profile image.  
-⋅⋅⋅(4) once you have both files (the image and the .json file), open your IPFS desktop app in the file panel. From there use the import option from the top right and add both files.
-⋅⋅⋅(5) Now you should see both files in the IPSF files section, select them and pin to local node (or any other node you have).
-3. **send the IPFS location to the JungleTeam Contract**
-⋅⋅⋅(1) Copy the CID of the file and remove the first 2 chars. Should be "Qm", so "QmemtAUpp8V6CgdLhesi5GFbvPCa9zbSTmKh7FzebG3WBa" => "emtAUpp8V6CgdLhesi5GFbvPCa9zbSTmKh7FzebG3WBa".
-⋅⋅⋅(2) This is the base58 hash of the files, now to send it to the JungleTeamToken contract, you need to use a [bsae58 to hex converter](https://incoherency.co.uk/base58/).
-⋅⋅⋅(3) Finaly, you go to the JungleTeamToken page and put both hex into the set dev profile section and click send. Oc you need a connection to metamask to send the transaction and some BNB to pay the fees. (If you want to join the team but have no way of paying the fees, contact me (owner) and we can find a solution).
+You will also need a profile image. Once you have both the image and the json, send them to (telegram: @LiquidBlocks, discord: FCote#7672).  
+3. **Thats it! you are now part of the team**  
+To get some team tokens, simply start contributing to the project and the teams will reward you with the tokens.
